@@ -25,10 +25,10 @@
 		<meta name="theme-color" content="#ffffff">
 
 		<!-- Link to main style sheet -->
-		<link rel="stylesheet" href="style.css"> 
+		<link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}"> 
 	</head>
 	<body>
-        <script src="cam.js"></script>
+        <script src="{{ url_for('static', filename='JS/cam.js') }}"></script>
 		<!-- Camera -->
 		<main id="camera">
 
@@ -41,23 +41,23 @@
 		    <!-- Camera output -->
 		    <img src="//:0" alt="" id="camera--output">
 
-		    
-
-			<form method="POST" enctype="multipart/form-data" id="myForm">
-				<input type="button" value="Take a picture" onclick="upload()" id="camera--trigger">
-			</form>
-			<div id="my_camera"></div>
-			<a href="index.html">
-			<input type="button" onclick="snap()" value="Back">
-			</a>
-			<div id="results"></div>
+		    <!-- Camera trigger -->
+<button id="camera--trigger">Take a picture</button>
+<a href="/images/image-name.jpg" download="new-image-name.jpg"> 
+<br/>
+<br/>
+<form>
+<a href="/">
+<input type="button" value="Back" />
+</a>
+</form> 
 		</main>
 
 		<!-- Reference to your JavaScript file -->
-		<script src="app.js"></script>
+		<script src="{{ url_for('static', filename='JS/app.js') }}"></script>
 
 		<!-- Reference to adapter.js -->
-		<script src="adapter-min.js"></script>
+		<script src="{{ url_for('static', filename='JS/adapter-min.js') }}"></script>
 
 	</body>
 </html>

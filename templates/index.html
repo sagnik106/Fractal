@@ -14,7 +14,7 @@
 						<li><a href="#top"> Top </a></li>
                         <li><a href="#image"> Image </a></li>
                         <li><a href="#symptom"> Symptom </a></li>
-                        
+                        <li><a href="#Heospital"> NearByHospital </a></li>
                     </ul>
                 </nav>
 			</header>
@@ -32,7 +32,7 @@
                         <hr>
 						<p>Vision Input</p>
 						<form>
-							<a href="fire.html">
+							<a href="fire">
 							<input type="button" value="Input" />
 							</a>
 						</form>
@@ -44,27 +44,39 @@
                             <div>
                             <form  action="/" method="post">
                             <label for="f1">First Symptom</label>
-                            <input type="text" id="f1" name="firstsymptom" placeholder="Your First Symptom.."  required="required">
+                            <input type="text" id="f1" name="firstsymptom" placeholder="Your First Symptom..(Mandatory)"  required="required">
 
                             <label for="f2">Second Symptom</label>
-							<input type="text" id="f2" name="secondsymptom" placeholder="Your Second Symptom.."  required="required">
+							<input type="text" id="f2" name="secondsymptom" placeholder="Your Second Symptom..(Mandatory)"  required="required">
 							
 							<label for="f3">Third Symptom</label>
-							<input type="text" id="f3" name="thirdsymptom" placeholder="Your Third Symptom.."  required="required"> 
+							<input type="text" id="f3" name="thirdsymptom" placeholder="Your Third Symptom..(Optional)"> 
 							
 							<label for="f4">Fourth Symptom</label>
-                            <input type="text" id="f4" name="foursymptom" placeholder="Your Fourth Symptom.."  required="required">
-
+                            <input type="text" id="f4" name="foursymptom" placeholder="Your Fourth Symptom..(Optional)">
 
                             <input type="submit" value="Submit">
                             
                         </form>
                         </div>
-						
-						</article>
-						</main>				
+						<table style="width:100%">
+                            {% for task in tasks %}
+                            <tr>
+                            <td>{{task}}</td>                          
+                            </tr>
+                        {% endfor %} 
+                        </table>
+                 
+                    <h2 style="font-size: 2em" id="hospital"> NearBy Hospitals </h2>
+                    <hr>
+                    <p>Hospitals near me</p>
+                    
+                        </article>
+                        
+                        </main>		
+                        		
 			</section>  
-			   
+	        
 			   
 		</div>
 
