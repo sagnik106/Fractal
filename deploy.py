@@ -4,23 +4,25 @@ import ML.sympton as s
 
 #v=Vision()
 app=Flask(__name__)
-
 @app.route('/',methods=['POST','GET'])
 def index():
     print(request.method)
     if request.method == 'POST':
-        l=s.look_up([request.form['firstsymptom'],request.form['secondsymptom'],request.form['thirdsymptom'],request.form['foursymptom']])
-        print(l)
-        return redirect('/')
+        m=[request.form['firstsymptom'],request.form['secondsymptom'],request.form['thirdsymptom'],request.form['foursymptom']]
+        m=[i for i in m if i!='']
+        l=s.look_up(m)
+        print(m)
+        return render_template('index.html',tasks=l)
     else:
-        return render_template('index.html')
+        return render_template('index.html',tasks=[" "])
 
-@app.route('/camera',methods=['POST','GET'])
+
+@app.route('/fire',methods=['POST','GET'])
 def cam():
     if request.method == 'POST':
         pass
     else:
-        return render_template('camera.html')
+        return render_template('fire.html')
 
 @app.route('/symp',methods=['POST','GET'])
 def symp():

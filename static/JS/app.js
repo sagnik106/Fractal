@@ -48,6 +48,7 @@ cameraTrigger.onclick = function() {
     evt.initEvent("click");
     aLink.download = 'image.png';
     aLink.href = cameraOutput.src;
+    console.log(aLink);
     var download = document.createElement('a');
     download.href = image.png;
     download.download = 'image.png';
@@ -56,6 +57,9 @@ cameraTrigger.onclick = function() {
     aLink.dispatchEvent(evt);
     // track.stop();
 };
+
+
+
 
 
 
@@ -74,3 +78,5 @@ if ('serviceWorker' in navigator) {
 } else {
   console.log('CLIENT: service worker is not supported.');
 }
+
+
