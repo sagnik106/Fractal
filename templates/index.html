@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}"/>
+    </head>
+    <body id="home" class="open-left">	
+       
+        <div class="center">
+            <header>
+                <nav>
+                    <ul>
+						<li><a href="#top"> Top </a></li>
+                        <li><a href="#image"> Image </a></li>
+                        <li><a href="#symptom"> Symptom </a></li>
+                        
+                    </ul>
+                </nav>
+			</header>
+			
+            <section>
+                <main id="top">
+                    <article>
+                        <figure class="hero">
+                            <img src="https://picsum.photos/1200/440/?image=201" alt="A laptop with a mouse on a desk and a pair of glasses."/>
+                            <figcaption>
+                                <h1>C2C</h1>
+                            </figcaption>
+						</figure>
+						<h2 style="font-size: 2em" id="image"> Image </h2>
+                        <hr>
+						<p>Vision Input</p>
+						<form>
+							<a href="fire.html">
+							<input type="button" value="Input" />
+							</a>
+						</form>
+						<h2 style="font-size: 2em" id="symptom"> Symptom </h2>
+                        <hr>
+						<p>Symptom Input</p>
+						
+							<h3>Symptom</h3>
+                            <div>
+                            <form  action="/" method="post">
+                            <label for="f1">First Symptom</label>
+                            <input type="text" id="f1" name="firstsymptom" placeholder="Your First Symptom.."  required="required">
+
+                            <label for="f2">Second Symptom</label>
+							<input type="text" id="f2" name="secondsymptom" placeholder="Your Second Symptom.."  required="required">
+							
+							<label for="f3">Third Symptom</label>
+							<input type="text" id="f3" name="thirdsymptom" placeholder="Your Third Symptom.."  required="required"> 
+							
+							<label for="f4">Fourth Symptom</label>
+                            <input type="text" id="f4" name="foursymptom" placeholder="Your Fourth Symptom.."  required="required">
+
+
+                            <input type="submit" value="Submit">
+                            
+                        </form>
+                        </div>
+						
+						</article>
+						</main>				
+			</section>  
+			   
+			   
+		</div>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='JS/index.js') }}"></script>
+    </body>
+</html>
+
